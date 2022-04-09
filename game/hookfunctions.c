@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:10:45 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 16:50:02 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:49:42 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 t_vector	updatepos(int keycode, t_prog *prog)
 {
@@ -69,6 +69,6 @@ int	move(int key, t_prog *prog)
 			prog->map.coi.num--;
 		changepos(prog, newpos, curpos);
 	}
-	prog->movetimer = 4;
+	prog->movetimer = 1;
 	return (0);
 }

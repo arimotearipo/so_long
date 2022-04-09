@@ -6,7 +6,7 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:10:49 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 18:44:27 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/08 20:27:25 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,10 @@ typedef struct s_map
 	t_sprite	exi7;
 	t_sprite	exi8;
 	t_sprite	coi;
+	t_sprite	coi0;
+	t_sprite	coi1;
+	t_sprite	coi2;
+	t_sprite	coi3;
 	t_sprite	flr;
 	t_vector	size;
 	int			invalid_char;
@@ -117,5 +121,6 @@ int			ft_close(t_prog *prog);
 void		ft_win(t_prog *prog);
 void		putanimatedplayer(t_prog *prog, t_map *map, t_vector *p);
 void		putanimatedexit(t_prog *prog, t_map *map, t_vector *p);
+void		putanimatedcoin(t_prog *prog, t_map *map, t_vector *p);
 
 #endif

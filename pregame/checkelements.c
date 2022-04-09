@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checkfilename.c                                    :+:      :+:    :+:   */
+/*   checkelements.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 17:10:56 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/06 17:56:57 by wwan-taj         ###   ########.fr       */
+/*   Created: 2022/04/06 17:10:59 by wwan-taj          #+#    #+#             */
+/*   Updated: 2022/04/09 13:50:15 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
-int	checkfilename(char *file)
+int	checkelements(t_map *map)
 {
-	int		start;
-	int		fd;
-	char	*ext;
-	char	*fileext;
-
-	fd = open(file, O_RDONLY);
-	if (fd < 0)
+	if (map->ply.num != 1)
 	{
-		ft_printf("Error\nFile does not exist\n");
+		ft_printf("Error\nNeeds one player character\n");
 		return (0);
 	}
-	start = ft_strlen(file) - 4;
-	ext = ".ber";
-	fileext = ft_substr(file, start, ft_strlen(file));
-	if (ft_strncmp(fileext, ext, 4) || ft_strlen(file) < 5)
+	else if (map->exi.num == 0)
 	{
-		ft_printf("Error\nWrong filetype\n");
+		ft_printf("Error\nNo exit!\n");
 		return (0);
 	}
-	free(fileext);
+	else if (map->coi.num == 0)
+	{
+		ft_printf("Error\nNo collectibles!\n");
+		return (0);
+	}
+	else if (map->invalid_char == 1)
+	{
+		ft_printf("Error\nInvalid character detected!\n");
+		return (0);
+	}
 	return (1);
 }

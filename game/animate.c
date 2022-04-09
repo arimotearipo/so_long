@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 21:04:23 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 18:47:07 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:49:47 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void	putanimatedplayer(t_prog *prog, t_map *map, t_vector *p)
 {
@@ -54,4 +54,16 @@ void	putanimatedexit(t_prog *prog, t_map *map, t_vector *p)
 		mlx_put_image_to_window(prog->mlx, prog->win, map->exi7.r, p->x, p->y);
 	else if (prog->frames < 60)
 		mlx_put_image_to_window(prog->mlx, prog->win, map->exi8.r, p->x, p->y);
+}
+
+void	putanimatedcoin(t_prog *prog, t_map *map, t_vector *p)
+{
+	if (prog->frames < 15)
+		mlx_put_image_to_window(prog->mlx, prog->win, map->coi0.r, p->x, p->y);
+	else if (prog->frames < 30)
+		mlx_put_image_to_window(prog->mlx, prog->win, map->coi1.r, p->x, p->y);
+	else if (prog->frames < 45)
+		mlx_put_image_to_window(prog->mlx, prog->win, map->coi2.r, p->x, p->y);
+	else if (prog->frames < 60)
+		mlx_put_image_to_window(prog->mlx, prog->win, map->coi3.r, p->x, p->y);
 }

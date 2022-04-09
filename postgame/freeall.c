@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checkerror.c                                       :+:      :+:    :+:   */
+/*   freeall.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 17:11:03 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/07 18:11:19 by wwan-taj         ###   ########.fr       */
+/*   Created: 2022/04/06 17:10:42 by wwan-taj          #+#    #+#             */
+/*   Updated: 2022/04/09 13:50:11 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
-int	checkerror(char *file, t_map *map)
-{	
-	if (!checkfilename(file) || !isrectangle(file, map))
-		return (0);
-	parsemap(file, map);
-	if (!iswallenclosed(map))
+void	freeall(char **arr, int rownum)
+{
+	int	i;
+
+	i = 0;
+	while (i < rownum)
 	{
-		ft_printf("Error\nMap is not wall enclosed\n");
-		freeall(map->arr, map->size.y);
-		return (0);
+		free(arr[i]);
+		i++;
 	}
-	getinfo(map);
-	if (!checkelements(map))
-	{
-		freeall(map->arr, map->size.y);
-		return (0);
-	}
-	return (1);
+	free(arr);
 }

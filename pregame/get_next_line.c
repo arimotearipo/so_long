@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 13:33:10 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/03/31 14:01:49 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:50:24 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 char	*loadbuffer(int fd, char *initbuf, char *buffer)
 {

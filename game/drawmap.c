@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:10:37 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 19:31:51 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:49:50 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static	void	putsprite(char c, t_prog *prog, t_map *map, t_vector *p)
 {
@@ -22,7 +22,7 @@ static	void	putsprite(char c, t_prog *prog, t_map *map, t_vector *p)
 	else if (c == 'E')
 		putanimatedexit(prog, map, p);
 	else if (c == 'C')
-		mlx_put_image_to_window(prog->mlx, prog->win, map->coi.r, p->x, p->y);
+		putanimatedcoin(prog, map, p);
 }
 
 static	void	saveposition(char c, t_map *map, int y, int x)

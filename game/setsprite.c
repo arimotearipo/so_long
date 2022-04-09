@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:10:47 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 19:30:46 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:49:54 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static	void	createsprite(t_prog *prog, t_sprite *sp, char *path)
 {
@@ -41,13 +41,22 @@ static	void	createexitanimationsprite(t_prog *prog, t_map *map)
 	createsprite(prog, &map->exi8, "./sprites/exiani/exi8.xpm");
 }
 
+static	void	createcoinanimationsprite(t_prog *prog, t_map *map)
+{
+	createsprite(prog, &map->coi0, "./sprites/coiani/coi0.xpm");
+	createsprite(prog, &map->coi1, "./sprites/coiani/coi1.xpm");
+	createsprite(prog, &map->coi2, "./sprites/coiani/coi2.xpm");
+	createsprite(prog, &map->coi3, "./sprites/coiani/coi3.xpm");
+}
+
 void	setsprite(t_prog *prog, t_map *map)
 {
 	createsprite(prog, &map->ply, "./sprites/player2.xpm");
 	createsprite(prog, &map->exi, "./sprites/exit.xpm");
-	createsprite(prog, &map->coi, "./sprites/coin.xpm");
-	createsprite(prog, &map->flr, "./sprites/floor.xpm");
+	createsprite(prog, &map->coi, "./sprites/coiani/coi0.xpm");
+	createsprite(prog, &map->flr, "./sprites/floor0.xpm");
 	createsprite(prog, &map->wal, "./sprites/wall.xpm");
 	createplayeranimationsprite(prog, map);
 	createexitanimationsprite(prog, map);
+	createcoinanimationsprite(prog, map);
 }

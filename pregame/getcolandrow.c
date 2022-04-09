@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:25:46 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/06 18:27:08 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:50:27 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static	void	getcolnum(char *file, t_map *map)
 {

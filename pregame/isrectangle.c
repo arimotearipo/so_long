@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:11:16 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/07 15:34:42 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:50:36 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static	int	isempty(t_map *map)
 {

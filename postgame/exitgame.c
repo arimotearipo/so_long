@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:32:37 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 19:32:07 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:50:09 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static	void	ft_destroy_ply_img(t_prog *prog)
 {

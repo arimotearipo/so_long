@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:10:39 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 16:28:15 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:50:33 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void	initprog(t_prog *prog)
 {

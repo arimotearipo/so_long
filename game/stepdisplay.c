@@ -6,11 +6,11 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 11:49:43 by wwan-taj          #+#    #+#             */
-/*   Updated: 2022/04/08 13:16:53 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/04/09 13:50:00 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static	void	replacestepbackground(t_prog *prog)
 {
